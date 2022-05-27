@@ -1,0 +1,60 @@
+.sidebar {
+    min-height: 100vh !important;
+    z-index: 100;
+    padding: 1em;
+    margin-left: 1em;
+    background: rgb(255, 255, 255);
+    border-right: 1px solid rgb(196, 196, 196);
+    color: black;
+    font-weight: 700;
+    text-align: left;
+}
+
+.sidebar .nav-link {
+    color: black;
+}
+
+.bg-main {
+    background: #f3f3f3;
+}
+
+.stat-cards {
+    border-radius: 10px !important;
+    border: 0;
+    text-align: left;
+}
+
+.stat-cards h2 {
+    font-weight: 700;
+}
+
+.stat-cards p{
+    color: #333;
+    font-weight: 500;
+}
+
+.main-btn {
+    background-color: black !important;
+    color: white !important;
+    font-weight: 700 !important;
+    border: 0 !important;
+}
+
+/* #sidebar-wrapper{
+    min-height: 100vh !important;
+    width: fit-content;
+    margin-left: -1rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+}
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+}  */
