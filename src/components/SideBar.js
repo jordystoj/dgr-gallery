@@ -14,34 +14,22 @@ const SideBar = props => {
             <Navbar.Brand>DGR Gallery</Navbar.Brand>
 
             <Nav.Item>
-                <Nav.Link className="nav-link">
-                    <Link to="/">Dashboard</Link>
-                </Nav.Link>
+                <Link className="nav-link" to="/">Dashboard</Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link className="nav-link">
-                    <Link to="/submissions">Submissions</Link>
-                </Nav.Link>
+                <Link className="nav-link" to="/submissions">Submissions</Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link className="nav-link">
-                    <Link to="/galleries">Galleries</Link>
-                </Nav.Link>
+                <Link className="nav-link" to="/galleries">Galleries</Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link className="nav-link" >
-                    <Link to="/rides">Rides</Link>
-                </Nav.Link>
+                <Link className="nav-link" to="/rides">Rides</Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link className="nav-link">
-                    <Link to="/tags">Tags</Link>
-                </Nav.Link>
+                <Link className="nav-link" to="/tags">Tags</Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link className="nav-link">
-                    <Link to="/settings">Settings</Link>
-                </Nav.Link>
+                <Link className="nav-link" to="/settings">Settings</Link>
             </Nav.Item>
             </Nav>
           

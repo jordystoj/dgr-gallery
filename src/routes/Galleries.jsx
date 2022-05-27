@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {Container, Row, Col } from "react-bootstrap";
 import SideBar from "../components/SideBar";
 import '../styles/Dashboard.css'
@@ -13,7 +13,7 @@ const Galleries = props => {
     let buttons = true;
 
     // Create some album objects
-    const albums = [
+    const albumObject = [
         {
             photographerName: "Jordan Stojcevski",
             instagram: "@SoTallRightNow",
@@ -64,12 +64,15 @@ const Galleries = props => {
         }
     ];
 
-    let thumbnails = albums.map((album) => {
-        return(
-        <Col sm="4">
-            <Thumbnail photo={album}/>
-        </Col>)
-    })
+    // Set the state of the app
+    const [album, setAlbum] = useState(albumObject);
+
+    // let thumbnails = albums.map((album) => {
+    //     return(
+    //     <Col sm="4">
+    //         <Thumbnail photo={album}/>
+    //     </Col>)
+    // })
 
     return(
         <>
@@ -86,11 +89,11 @@ const Galleries = props => {
                                 <Header title="Galleries" buttons={buttons} btnText="Add Gallery"/>
                                 
                                 {/* Filter Bar */}
-                                <FilterBar />
+                                <FilterBar album={album} setAlbum={setAlbum}/>
 
                                 {/* Galleries */}
                                 <Row className="mt-4">
-                                    {thumbnails}
+                                    <Thumbnail album={album}/>
                                 </Row>
                             </Col>
                             <Col sm="1"></Col>

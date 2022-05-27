@@ -3,16 +3,9 @@ import {Row, Col} from "react-bootstrap";
 import '../styles/Dashboard.css'
 import Thumbnail from "./Thumbnail";
 
+
 const Gallery = props => {
 
-    let imageObject = {
-        url: "http://www.thebetterlivingindex.com/wp-content/uploads/2018/09/DGR-2018-Triumph-Yamaha-1050x700.jpg",
-        city: "Sydney",
-        country: "Australia",
-        photographer: "John Herbert",
-        date: "2022-05-22T12:44:44Z",
-        status: "confirmed"
-    };
 
     // let albumObject = {
     //     thumbnail: "http://www.thebetterlivingindex.com/wp-content/uploads/2018/09/DGR-2018-Triumph-Yamaha-1050x700.jpg",
@@ -53,16 +46,7 @@ const Gallery = props => {
 
             {/* Render list of images */}
             <Row>
-                <Col sm="6" md="4">
-                    <Thumbnail photo={imageObject} />
-                </Col>
-                <Col sm="6" md="4">
-                    <Thumbnail photo={imageObject}/>
-                </Col>
-                <Col sm="6" md="4">
-                    <Thumbnail photo={imageObject}/>
-                </Col>
-
+                <Thumbnail album={props.album}/>
             </Row>
             
           
