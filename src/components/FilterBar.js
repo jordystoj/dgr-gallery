@@ -51,8 +51,23 @@ const FilterBar = ({ album, setAlbum }) => {
 
     // Get value from state after rendering
     useEffect(() => {
-        console.log(filter);
+        newQuery(filter);
     })
+
+    function newQuery(filter){
+        // Build query string
+        let query = "";
+        for (const i in filter) {
+            console.log(i);
+            if(filter[i] !== ""){
+                query = i+"="+filter[i]+"&";
+            }
+        }
+
+        // Fetch query
+        // Update state
+        // Display new state
+    }
 
     return (
         <>
@@ -78,7 +93,7 @@ const FilterBar = ({ album, setAlbum }) => {
                         {
                             countries.map((country, index) => {
                                 return (
-                                    <option key={index} value={country}>{country}</option>
+                                    <option key={index} value={country.toLowerCase()}>{country}</option>
                                 );
                             })
                         }
@@ -91,7 +106,7 @@ const FilterBar = ({ album, setAlbum }) => {
                         {
                             cities.map((city, index) => {
                                 return (
-                                    <option key={index} value={city}>{city}</option>
+                                    <option key={index} value={city.toLowerCase()}>{city}</option>
                                 );
                             })
                         }

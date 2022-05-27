@@ -25,7 +25,7 @@ const Header = props => {
                     <h2 style={{ fontWeight: 700, textTransform: 'capitalize' }}>{props.title}</h2>
                     </Col>
                     <Col sm="6" style={{ textAlign: "right"}}>
-                        <Button className="main-btn">{props.btnText}</Button>
+                        <Button className="main-btn" onClick={props.clickEvent}>{props.btnText}</Button>
                     </Col>
                 </Row>
             </>
